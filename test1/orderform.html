@@ -7,19 +7,43 @@
       *{
         margin: 0px;
         padding: 0px;
-
+      }
+      h1, h2{
+        text-align:center;
+      }
+      form{
+        position: absolute;
+        left: 31%;
+        text-align:center;
+        vertical-align:middle;
+        font-size: 20px;
+      }
+      .form_input{
+          width: 200px;
+          height: 20px;
+      }
+      .form_submit{
+          margin-top: 30px;
+          width: 150px;
+          height: 30px;
+      }
+      select{
+        width: 204px;
+        height: 30px;
       }
     </style>
 
   </head>
   <body>
+      <h1>Bob's Aotm Part</h1>
+      <h2>Order Form</h2>
       <form class="" action="processorder.php" method="post">
         <table border = " 0 ">
           <tr bgcolor = "#ccc">
-              <td width = "150">
+              <td width = "250">
                 Item
               </td>
-              <td whidth = "15">
+              <td whidth = "250">
                 Quantity
               </td>
           </tr>
@@ -28,7 +52,7 @@
               Tires
             </td>
             <td align = "center" >
-              <input type="test" name="tireqty" size="3" maxlength="3" />
+              <input class = "form_input" type="test" name="tireqty" size="3" maxlength="3" />
             </td>
           </tr>
           <tr>
@@ -36,7 +60,7 @@
               Oil
             </td>
             <td align = "center">
-              <input type="test" name="oilqty" size="3" maxlength="3" />
+              <input class = "form_input" type="test" name="oilqty" size="3" maxlength="3" />
             </td>
           </tr>
           <tr>
@@ -44,12 +68,33 @@
               Spark Plugs
             </td>
             <td align = "center">
-              <input type="test" name="sparkqty" size="3" maxlength="3" />
+              <input class = "form_input" type="test" name="sparkqty" size="3" maxlength="3" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              How did you find Bob's?
+            </td>
+            <td>
+              <select class="" name="find">
+                <option value="a">I'm a regular customer</option>
+                <option value="b">TV advertising</option>
+                <option value="c">Phone directory</option>
+                <option value="d">Word a mouth</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Shoping Adress
+            </td>
+            <td>
+              <input class = "form_input" type="test" name="adress"  />
             </td>
           </tr>
           <tr>
             <td colspan="2" align="center">
-              <input type="submit" value="Submit Order">
+              <input class = "form_submit" type="submit" value="Submit Order">
             </td>
           </tr>
         </table>
