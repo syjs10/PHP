@@ -8,6 +8,8 @@
       $tireqty = $_POST['tireqty'];
       $oilqty = $_POST['oilqty'];
       $sparkqty = $_POST['sparkqty'];
+      $address = $_POST['address'];
+
     ?>
   </head>
   <body>
@@ -16,7 +18,7 @@
     <?php
       echo "Hello World!";
       echo '<p>Order process at ';
-      echo date('H:i, jS F Y');
+      echo $date = date('Y F jS  H:i');
       echo '</p>';
       echo "Your order is as follows:<br />";
       echo $tireqty.' tires<br />';
@@ -73,15 +75,33 @@
               echo "<p>Word a mouth customer</p>";
               break;
       }
-      $address = $_REQUEST['address'];
+
       //写入文件
       $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
       echo $DOCUMENT_ROOT;
-      $fp = fopen("$DOCUMENT_ROOT/../orders/orders.txt", 'ab');
 
+      $fp = fopen("$DOCUMENT_ROOT/orders/orders.txt", 'ab');
       // if (!$fp){
       //     echo "Your order couldn't be processed at this time. Please try again later.";
-      // }
+      // }date('H:i, jS F Y')
+      $outputstring = "Order Date: ".$date."\n".
+                      $tireqty." tires\n".
+                      $oilqty." oil\n".$sparkqty.
+                      " spark plugs\n".
+                      "$".number_format($totalamount, 2)."\nAddress: ".
+                      $address.
+                      "\n****************************************************************\n";
+      fwrite($fp, $outputstring);
+      $outputstring1 = $date."\t".
+                      $tireqty." tires\t".
+                      $oilqty." oil\t".$sparkqty.
+                      " spark plugs\t".
+                      "$".number_format($totalamount, 2)."\tAddress: ".
+                      $address."<br/>";
+
+      $fp1 = fopen("$DOCUMENT_ROOT/orders/orders1.txt", "ab");
+      fwrite($fp1, $outputstring1);
+
     ?>
 
   </body>
