@@ -91,17 +91,19 @@
                       "$".number_format($totalamount, 2)."\nAddress: ".
                       $address.
                       "\n****************************************************************\n";
-      fwrite($fp, $outputstring);
+      //fwrite($fp, $outputstring);
       $outputstring1 = $date."\t".
                       $tireqty." tires\t".
                       $oilqty." oil\t".$sparkqty.
                       " spark plugs\t".
                       "$".number_format($totalamount, 2)."\tAddress: ".
-                      $address."<br/>";
+                      $address."\n";
 
       $fp1 = fopen("$DOCUMENT_ROOT/orders/orders1.txt", "ab");
+      flock($fp, LOCK_EX);
       fwrite($fp1, $outputstring1);
-
+      flock($fp, LOCK_UN);
+      fclose($fp);
     ?>
 
   </body>
