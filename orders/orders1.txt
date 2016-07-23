@@ -1,2 +1,4 @@
-2016 July 21st  20:29	1 tires	2 oil	3 spark plugs	$145.00	Address: Mars
-2016 July 21st  20:29	12 tires	221 oil	213 spark plugs	$4,688.00	Address: Moon
+2016 July 21st  20:29	1 tires	2 oil	3 spark plugs	$145.00	 Mars
+2016 July 21st  20:29	12 tires	221 oil	213 spark plugs	$4,688.00	 Moon
+2016 July 22nd  15:16	121 tires	32 oil	32 spark plugs	$13,802.00	Mars
+2016 July 22nd  15:16	21 tires	42 oil	2 spark plugs	$2,780.00	Moon

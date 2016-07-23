@@ -88,7 +88,7 @@
                       $tireqty." tires\n".
                       $oilqty." oil\n".$sparkqty.
                       " spark plugs\n".
-                      "$".number_format($totalamount, 2)."\nAddress: ".
+                      "$".number_format($totalamount, 2)."\n".
                       $address.
                       "\n****************************************************************\n";
       //fwrite($fp, $outputstring);
@@ -96,7 +96,7 @@
                       $tireqty." tires\t".
                       $oilqty." oil\t".$sparkqty.
                       " spark plugs\t".
-                      "$".number_format($totalamount, 2)."\tAddress: ".
+                      "$".number_format($totalamount, 2)."\t".
                       $address."\n";
 
       $fp1 = fopen("$DOCUMENT_ROOT/orders/orders1.txt", "ab");
