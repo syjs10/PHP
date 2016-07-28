@@ -13,8 +13,13 @@
                     "Customer email: ".$email."\n".
                     "customer comments: ". $feedback."\n";
     $fromAddress = "Form: syjs10@aliyun.com";
-    mail($toAddress, $subject, $mailContent, $fromAddress);
+    if (!preg_match('/^[a-zA-Z0-9-_]+@[a-zA-Z0-9-_]+\.[a-zA-Z0-9-_]+$/', $email)) {
+        echo "Please input right E-mail.";
+    }
+
+    //mail($toAddress, $subject, $mailContent, $fromAddress);
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
