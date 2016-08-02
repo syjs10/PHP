@@ -1,9 +1,9 @@
 use book;
 
 insert into customers values
-(4, 'Julie Smith', '25 Oak Street', 'Airport West'),
-(5, 'Alan Wong', '1/47 Haines Avenue', 'Box Hill'),
-(6, 'Michelle Arthur', '357 North Road', 'Yarraville');
+(3, 'Julie Smith', '25 Oak Street', 'Airport West'),
+(4, 'Alan Wong', '1/47 Haines Avenue', 'Box Hill'),
+(5, 'Michelle Arthur', '357 North Road', 'Yarraville');
 
 insert into orders values 
 (NULL, 3, 69.98, '2007-04-02'),
