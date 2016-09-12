@@ -18,7 +18,7 @@
                         </tr>
                         <tr>
                               <td colspan="2">
-                                    <input type="submit" value = "添加分类"/>
+                                    <input type="submit" value = "查  询"/>
                               </td>
                         </tr>
                   </table>

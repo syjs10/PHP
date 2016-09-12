@@ -35,7 +35,7 @@
             <div class="details">
                                 <div class="details_operation clearfix">
                                     <div class="bui_select">
-                                        <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addCate()">
+                                        <input type="button" value="新生列表" class="add"  >
                                     </div>
 
                                 </div>

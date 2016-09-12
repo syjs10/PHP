@@ -37,7 +37,7 @@
             <div class="details">
                                 <div class="details_operation clearfix">
                                     <div class="bui_select">
-                                        <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addCate()">
+                                        <input type="button" value="已选人员" class="add"  >
                                     </div>
 
                                 </div>
@@ -86,8 +86,7 @@
 
                                             <td align="center">
                                                  <input type="button" value="查看" class="btn" onclick="seeCate(<?php echo $row['id'];?>)">
-                                                  <input type="button" value="修改" class="btn" onclick="editCate(<?php echo $row['id'];?>)">
-                                                  <input type="button" value="删除" class="btn" onclick="delCate(<?php echo $row['id'];?>)">
+                                                  
                                             </td>
                                         </tr>
                                    <?php  $i++; endforeach;?>

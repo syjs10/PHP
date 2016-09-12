@@ -10,10 +10,9 @@
 			$review = $_POST['review'];
 			$score = $_POST['score'];
 			$id = $_POST['id'];
-			$department = $_SESSION['username'];
+			$department = $_SESSION['adminName'];
 
-			$query = "insert into review values('".
-					$id."', '".$department."', '".$score."', '".$review."')";
+			$query = "insert into review values('{$id}', '{$department}', '{$score}', '{$review}')";
 			$result = mysql_query($query);
 			if ($result) {
 				echo "<script>alert('提交成功');location.href='main.php'</script>";

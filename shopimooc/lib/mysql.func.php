@@ -1,5 +1,4 @@
 <?php
-
 //连接数据库
       function connect(){
             $link = mysql_connect(DB_HOST, DB_USER, DB_PWD) or die("数据库链接失败 Error：".mysql_errno().":".mysql_error());
@@ -7,6 +6,7 @@
             mysql_select_db(DB_DBNAME) or die("指定数据库打开失败");
             return $link;
       }
+
 //插入记录
       function insert($table, $array){
             $keys = join(",", array_keys($array));
@@ -27,8 +27,13 @@
                   $str.= $sep.$key."='".$value."'";
             }
             $sql = "update {$table} set {$str} ".($where==NUll?NULL:"where ".$where);
-            mysql_query($sql);
-            return mysql_affected_rows();
+            $result = mysql_query($sql);
+            if ($result) {
+                  return mysql_affected_rows();
+            } else {
+                  return false;
+            }
+
       }
 
 //删除操作

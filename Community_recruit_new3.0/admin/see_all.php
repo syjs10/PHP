@@ -31,15 +31,11 @@
 			echo "</tr>";
 			echo "<tr>";
 			echo "<td>照片：</td>";
-			echo "<td><img src=\"photo/".$id.".jpeg\"  width=\"128\" height=\"128\"></td>";
+			echo "<td><img src=\"/photo/".$id.".jpeg\"  width=\"128\" height=\"128\"></td>";
 			echo "</tr>";
 			echo "<tr>";
 			echo "<td>班级：</td>";
 			echo "<td>".htmlspecialchars(stripslashes($row['class']))."</td>";
-			echo "</tr>";
-			echo "<tr>";
-			echo "<td>部门：</td>";
-			echo "<td>".htmlspecialchars(stripslashes($row['department']))."</td>";
 			echo "</tr>";
 			echo "<tr>";
 			echo "<td>电话：</td>";
@@ -59,7 +55,7 @@
 			echo "<td>自我介绍：</td>";
 			echo "<td>".htmlspecialchars(stripslashes($row['introduction']))."</td>";
 
-			$query0 = "select * from review where id ='".$id."'and department = '".$department."'";
+			$query0 = "select * from review where id ='{$id}'and department = '{$department}'";
 			$result1 = $db -> query($query0);
 			$row1 = $result1 -> fetch_assoc();
 			echo "</tr>";

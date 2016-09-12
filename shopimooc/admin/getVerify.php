@@ -1,4 +1,4 @@
 <?php
       require_once '../include.php';
-      verifyImage();
+      verifyImage(1, 4, 30, 3);
 ?>

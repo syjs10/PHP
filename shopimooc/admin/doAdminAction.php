@@ -9,6 +9,11 @@
             $mes = editAdmin($_REQUEST['id']);
       }elseif ($act == 'delAdmin') {
             $mes = delAdmin($_REQUEST['id']);
+      }elseif ($act == 'addCate') {
+            $mes = addCate();
+      }elseif ($act == 'editCate') {
+            $where = "id = {$_REQUEST['id']}";
+            $mes = editCate($where);
       }
 ?>
 <!DOCTYPE html>

@@ -10,12 +10,12 @@ CREATE TABLE `imooc_admin`(
 );
 --分类表
 DROP TABLE IF EXISTS `imooc_cate`;
-CREATE TABLE `immoc_cate`(
+CREATE TABLE `imooc_cate`(
 	`id` smallint unsigned auto_increment key,
-	`cNmae` varchar(50) unique
+	`cName` varchar(50) unique
 );
 --商品表
-DROP TABLE IF EXISTS `immoc_pro`;
+DROP TABLE IF EXISTS `imooc_pro`;
 CREATE TABLE `imooc_pro`(
 	`id` int unsigned auto_increment key,
 	`pName` varchar (50) not null unique,
@@ -29,8 +29,8 @@ CREATE TABLE `imooc_pro`(
 	`isShow` tinyint(1) default 1,
 	`isHot` tinyint(1) default 0,
 	`cId` smallint unsigned not null
-); 
---用户表 
+);
+--用户表
 DROP TABLE IF EXISTS `imooc_user`;
 CREATE TABLE `imooc_user`(
 	`id` int unsigned auto_increment key,

@@ -6,9 +6,9 @@
 	</head>
 	<body>
 		<?php
-			$id = $_POST['id'];
-			$department = $_POST['department'];
-			@ $db = new mysqli('localhost', 'student', 'student123', 'student');
+			$id = htmlentities($_POST['id']);
+			$department = htmlentities($_POST['department']);
+			$db = new mysqli('localhost', 'student', 'student123', 'student');
 			if (mysqli_connect_errno()) {
 				echo "Error: Could not connect database.";
 			}
@@ -30,7 +30,7 @@
 			}
 			$result1 = $db -> query($query1);
 			if ($result1) {
-				echo "<script>alert(\"取消录取\");location.href=\"xuanren.php?department=".$department."\"</script>";
+				echo "<script>alert('取消录取');location.href='listCate.php'</script>";
 
 			}
 

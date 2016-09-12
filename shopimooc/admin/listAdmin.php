@@ -7,7 +7,8 @@
       //得到总页码数
       $totalPage = ceil($totalRows/$pageSize);
       $pageSize = 2;
-      $page     = ($_REQUEST['page']?(int)$_REQUEST['page']:1);
+
+      @ $page     = ($_REQUEST['page']?(int)$_REQUEST['page']:1);
       if ($page<1 || $page==NULL||!is_numeric($page)){
             $page = 1;
       }
@@ -15,7 +16,7 @@
             $page = $totalPage;
       }
       $offset = ($page-1)*$pageSize;
-      $sql    = "select id username email from imooc_admin limit {$offset},{$pageSize}";
+      $sql    = "select * from imooc_admin limit {$offset},{$pageSize}";
       $rows   = fetchAll($sql);
       //$rows = getAllAdmain();
 
@@ -36,7 +37,7 @@
 
                     </div>
                     <!--表格-->
-                    <table class="table" cellspacing="0" cellpadding="0">
+                    <table class="table" cellspacing="0" cellpadding="0" style="text-align:center;">
                         <thead>
                             <tr>
                                 <th width="15%">编号</th>

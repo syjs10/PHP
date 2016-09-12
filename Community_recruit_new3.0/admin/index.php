@@ -1,6 +1,9 @@
 <?php
       require_once '../include.php';
       checkLogined();
+      if($_SESSION['adminName'] != "root"){
+            alertMes("请先登陆",'login.php');
+      }
 ?>
 <!doctype html>
 <html>

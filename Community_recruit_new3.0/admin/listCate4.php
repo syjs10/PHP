@@ -37,7 +37,7 @@
             <div class="details">
                                 <div class="details_operation clearfix">
                                     <div class="bui_select">
-                                        <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addCate()">
+                                        <input type="button" value="冲突人员" class="add"  >
                                     </div>
 
                                 </div>
@@ -84,7 +84,7 @@
                                                 <?php echo $row['name']; ?>
                                             </td>
                                             <td>
-                                                 <?php                                           
+                                                 <?php
                                                  $dep=htmlspecialchars(stripslashes($row['employ_department']))=="NULL"?" ":htmlspecialchars(stripslashes($row['employ_department']));
                                                  $dep1=htmlspecialchars(stripslashes($row['employ_department1']))=="NULL"?" ":htmlspecialchars(stripslashes($row['employ_department1']));
                                                  $dep2=htmlspecialchars(stripslashes($row['employ_department2']))=="NULL"?" ":htmlspecialchars(stripslashes($row['employ_department2'])); $dep3=htmlspecialchars(stripslashes($row['employ_department3']))=="NULL"?" ":htmlspecialchars(stripslashes($row['employ_department3']));
@@ -94,8 +94,7 @@
 
                                             <td align="center">
                                                  <input type="button" value="查看" class="btn" onclick="seeCate(<?php echo $row['id'];?>)">
-                                                  <input type="button" value="修改" class="btn" onclick="editCate(<?php echo $row['id'];?>)">
-                                                  <input type="button" value="删除" class="btn" onclick="delCate(<?php echo $row['id'];?>)">
+                                                  
                                             </td>
                                         </tr>
 

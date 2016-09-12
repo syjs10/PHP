@@ -42,6 +42,7 @@
             $row = fetchAll($sql);
             return $row;
       }
+      
       //编辑管理员
       function editAdmin($id) {
             $arr = $_POST;

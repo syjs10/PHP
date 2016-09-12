@@ -20,32 +20,32 @@
 				if ($row['employ_department1'] != 'NULL'&& $row['employ_department1']!=$department ){
 					if ($row['employ_department2'] != 'NULL' && $row['employ_department2']!=$department){
 						if ( $row['employ_department3']!= $department) {
-							$query1 = "update student set employ_department3 = '".$department."' where id = ".$id;
+							$query1 = "update student set employ_department3 = '{$department}' where id = ".$id;
 							$result1 = $db -> query($query1);
 							if ($result1) {
-								echo "<script>alert(\"录取成功\");location.href=\"xuanren.php?department=".$department."\"</script>";
+								echo "<script>alert('录取成功');location.href='listCate3.php'</script>";
 							}
 						}
 
 					}else{
-						$query1 = "update student set employ_department2 = '".$department."' where id = ".$id;
+						$query1 = "update student set employ_department2 = '{$department}' where id = ".$id;
 						$result1 = $db -> query($query1);
 						if ($result1) {
-							echo "<script>alert(\"录取成功\");location.href=\"xuanren.php?department=".$department."\"</script>";
+							echo "<script>alert('录取成功');location.href='listCate3.php'</script>";
 						}
 					}
 				}else{
-					$query1 = "update student set employ_department1 = '".$department."' where id = ".$id;
+					$query1 = "update student set employ_department1 = '{$department}' where id = ".$id;
 					$result1 = $db -> query($query1);
 					if ($result1) {
-						echo "<script>alert(\"录取成功\");location.href=\"xuanren.php?department=".$department."\"</script>";
+						echo "<script>alert('录取成功');location.href='listCate3.php'</script>";
 					}
 				}
 			} else {
-				$query1 = "update student set employ_department = '".$department."' where id = ".$id;
+				$query1 = "update student set employ_department = '{$department}' where id = ".$id;
 				$result1 = $db -> query($query1);
 				if ($result1) {
-					echo "<script>alert(\"录取成功\");location.href=\"xuanren.php?department=".$department."\"</script>";
+					echo "<script>alert('录取成功');location.href='listCate3.php'</script>";
 				}
 			}
 

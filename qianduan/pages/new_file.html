@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+      <!--
+		    作者：Roah
+		    日期：2016/9/4
+    -->
+      <meta charset="UTF-8">
+      <title>新生报名</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="renderer" content="webkit">
+      <meta http-equiv="Cache-Control" content="no-siteapp" />
+      <link rel="stylesheet" href="../css/amazeui.min.css" />
+      <link rel="stylesheet" href="../css/fubutton.css" />
+      <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+
+
+      <style>
+      body{
+            /*background-color: green;*/
+            background: url(11.jpg) no-repeat;
+            background-size: 100% 100%;
+      }
+      .am-g .am-panel{
+            background: rgba(255, 255, 255, 0) !important;
+            box-shadow: 0px 0px 30px #333;
+            border:0px !important;
+            border-radius: 3px;
+      }
+            .header {
+                  text-align: center;
+            }
+
+            .header h1 {
+                  font-size: 200%;
+                  color: #fff;
+                  margin-top: 30px;
+                  font-family: "宋体"!important;
+            }
+
+            .header p {
+                  font-size: 14px;
+            }
+            input {
+                  border: 0px !important;
+                  border-bottom: 1px solid #fff !important;
+                  color: #fff !important;
+                  font-weight: bold !important;
+                  font-size: 14px !important;
+                  margin-bottom: 10px !important;
+                  background: rgba(248, 250, 247, 0) !important;
+            }
+            select{
+                  border: 0px !important;
+                  border-bottom: 1px solid #fff !important;
+                  width: 85.3vw ;
+                  color: #fff !important;
+                  font-weight: bold !important;
+                  font-size: 14px !important;
+                  background: rgba(248, 250, 247, 0) !important;
+            }
+            .img{
+                  margin-top: -20px;
+
+            }
+      </style>
+</head>
+
+<body>
+      <div class="header">
+            <div class="am-g"style="height:200px;">
+
+
+            </div>
+
+      </div>
+      <div class="am-g">
+            <div class="am-u-lg-8 am-u-md-10 am-u-sm-centered ">
+
+                  <div class="am-panel am-panel-default">
+
+                        <div id="collapse-panel-1" class="am-panel-bd am-collapse am-in">
+                              <form method="post" class="am-form">
+
+                                    <input class="input" type="text" name="" id="xuehao" onblur="usrname()" value="学号" onfocus="javascript:if(this.value=='学号')this.value='';">
+                                    <div id="yzxuehao"></div>
+
+                                    <input type="text" id="nicheng" name="" id="nicheng" class="am-u-sm-12" onblur="nichengs()" value="姓名" onfocus="javascript:if(this.value=='姓名')this.value='';">
+                                    <div id="yznicheng" class="am-padding"></div>
+
+                                    <div></div>
+                                    <input type="text" id="class" name="" id="class" class="am-u-sm-12" onblur="nichengs()" value="班级" onfocus="javascript:if(this.value=='班级')this.value='';">
+                                    <div id="yzclass"></div>
+                                    <div class="am-form-group am-form-select">
+
+                                          <label>
+
+                                              <select id="select1"name="">
+                                                  <option value="male"> 性别</option>
+                                                  <option value="male">男</option>
+                                                  <option value="female">女</option>
+                                              </select>
+                                          </label>
+                                    </div>
+
+
+                                    <div class="am-form-group am-form-select">
+                                          <label>
+
+                                              <select id="select2"name="">
+                                                    <option >第一志愿</option>
+                                                  <option value="jishubu">技术部</option>
+                                                  <option value="yingyinbu">影音部</option>
+                                                  <option value="xuanchuanbu">宣传部</option>
+                                                   <option value="caibianbu">采编部</option>
+                                                  <option value="cehuabu">策划部</option>
+                                                  <option value="waishibu">外事部</option>
+                                              </select>
+
+                                          </label>
+                                    </div>
+                                    <div class="am-form-group am-form-select">
+                                          <label>
+
+                                              <select id="select3"name="">
+                                                    <option >调剂部门一(选填)</option>
+                                                    <option value="jishubu">技术部</option>
+                                                    <option value="yingyinbu">影音部</option>
+                                                    <option value="xuanchuanbu">宣传部</option>
+                                                    <option value="caibianbu">采编部</option>
+                                                    <option value="cehuabu">策划部</option>
+                                                    <option value="waishibu">外事部</option>
+                                              </select>
+
+                                          </label>
+                                          <label>
+
+                                              <select id="select4"name="">
+                                                    <option >调剂部门二(选填)</option>
+                                                    <option value="jishubu">技术部</option>
+                                                    <option value="yingyinbu">影音部</option>
+                                                    <option value="xuanchuanbu">宣传部</option>
+                                                    <option value="caibianbu">采编部</option>
+                                                    <option value="cehuabu">策划部</option>
+                                                    <option value="waishibu">外事部</option>
+                                              </select>
+
+                                          </label>
+
+                                    </div>
+
+                                    <label>
+
+                    </label>
+
+                                    <div class="am-form-group am-form-file img">
+                                          <button type="button" class="am-btn am-btn-danger am-btn-sm">
+					    <i class="am-icon-cloud-upload"></i> 选择要上传的照片</button>
+                                          <input id="doc-form-file" type="file" id="fileToUpload" name="fileToUpload" onchange="getPhotoSize(this)">
+
+                                    </div>
+                                    <div id="file-list">
+
+                                    </div>
+
+
+
+                                    <input type="hidden" id="piclujing">
+                                    <div class="am-form-group">
+
+                                          <label>
+
+
+
+                       <input type="text" name="code" class="am-u-sm-12" value="验证码" onfocus="javascript:if(this.value=='验证码')this.value='';" style="width:50%;">
+                       <img src="yanzhengma.roah"  onclick="changeValidateCode(this)" title="点击图片刷ccc码"style="width:50%;"/>
+                    </label>
+                                    </div>
+                                    <label>
+
+                    </label>
+
+                                    <textarea id="introduce" style="margin-top: -15px; margin-bottom: 0px; height: 113px; background: rgba(248, 250, 247, 0.05) !important;" placeholder="自我介绍"></textarea>
+                                    <div id="yzsex"></div>
+                                    <br>
+
+                                    <div class="am-cf">
+                                          <button type="button" onclick="doaction()" class="am-btn am-btn-primary am-btn-sm am-fl">确认报名</button>
+                                          <button type="button" class="am-btn am-btn-default am-btn-sm am-fr">取消</button>
+                                    </div>
+
+                              </form>
+                        </div>
+                  </div>
+                  <br>
+                  <p>© 2014 Roah&JS. Licensed under SUT license.</p>
+
+            </div>
+      </div>
+
+      <script>
+            function insertTitle(path) {
+                  var test1 = path.lastIndexOf("/"); //对路径进行截取
+                  var test2 = path.lastIndexOf("\\"); //对路径进行截取
+                  var test = Math.max(test1, test2);
+                  if (test < 0) {
+                        document.getElementById("fileToUpload").value = path;
+                  } else {
+                        document.getElementById("fileToUpload").value = path.substring(fileToUpload + 1); //赋值文件名
+                        document.getElementById("file-list").innerHTML = document.getElementById("fileToUpload").value;
+                  }
+            }
+
+
+
+
+            $(function() {
+                  $('#doc-form-file').on('change', function() {
+                        var fileNames = '';
+                        $.each(this.files, function() {
+                              fileNames += '<span class="am-badge">' + this.name + '</span> ';
+                        });
+                        $('#file-list').html(fileNames);
+                  });
+            });
+
+            /*
+             *
+             * Created by roah on 16-7-25.
+             *
+             */
+            function usrname() {
+                  if (document.getElementById("email").value != "") {
+                        document.getElementById("yzusername").innerHTML = "";
+                        return true;
+                  } else
+                        document.getElementById("yzusername").innerHTML = "<font color='red'>用户名不能为空</font>";
+                  return false;
+            }
+
+            function passwds() {
+                  if (document.getElementById("passwd").value != "") {
+                        document.getElementById("yzpasswd").innerHTML = "";
+                        return true;
+                  } else
+                        document.getElementById("yzpasswd").innerHTML = "<font color='red'>密码不能为空</font>";
+                  return false;
+            }
+
+            function surepswd() {
+                  if (document.getElementById("supasswd").value != "") {
+                        if (document.getElementById("passwd").value == document.getElementById("supasswd").value) {
+                              document.getElementById("surepasswd").innerHTML = "";
+
+                              return true;
+                        } else
+                              document.getElementById("surepasswd").innerHTML = "<font color='red'>两次密码不一致</font>";
+                        return false;
+                  } else
+                        document.getElementById("surepasswd").innerHTML = "<font color='red'>确认密码不能为空</font>";
+                  return false;
+            }
+
+            function nichengs() {
+                  if (document.getElementById("nicheng").value != "") {
+                        document.getElementById("yznicheng").innerHTML = "";
+                        return true;
+                  } else
+                        document.getElementById("yznicheng").innerHTML = "<font color='red'>昵称不能为空</font>";
+                  return false;
+            }
+
+            function doaction() {
+                  if (usrname() && passwds() && nichengs() && surepswd()) {
+                        if (document.getElementById("tongyi").checked) {
+                              alert("success");
+                        } else
+                              alert("没同意。");
+                  } else
+                        alert("未满足条件。");
+            }
+      </script>
+      <script type="text/javascript">
+            function yanzheng() {
+
+                  $("#loading").ajaxStart(function() {
+                        $(this).show();
+                  }).ajaxComplete(function() {
+                        //$(this).hide();
+                  });
+
+                  $.ajaxFileUpload({
+                        url: 'servlet/FileUploadServlet',
+                        secureuri: false,
+                        fileElementId: 'fileToUpload', //file标签的id
+                        dataType: 'json', //返回数据的类型
+                        data: {
+                              name: 'logan'
+                        }, //一同上传的数据
+                        success: function(data, status) {
+                              //把图片替换
+                              var obj = jQuery.parseJSON(data);
+                              alert(obj.fileName);
+                              /* obj.fileName = encodeURI(encodeURI(obj.fileName));
+                              $("#loading").attr("src", "./images/" + obj.fileName);
+                              var img = document.getElementById('loading');
+                              AutoResizeImage(180, 180, img);
+                              $("#loading").show();
+                              var img =document.getElementById("loading");
+                              img.style.display=""; */
+                              document.getElementById("piclujing").value = "images/" + obj.fileName;
+                              alert("success");
+
+
+                              if (typeof(data.error) != 'undefined') {
+                                    alert("未定义");
+                                    if (data.error != '') {
+                                          alert(data.error);
+
+                                    } else {
+                                          alert(data.msg);
+                                    }
+                              }
+                        },
+                        error: function(data, status, e) {
+                              alert("错误");
+                              alert(e);
+                        }
+                  });
+            }
+            /* function AutoResizeImage(maxWidth, maxHeight, objImg) {
+            	var img = new Image();
+            	img.src = objImg.src;
+            	var hRatio;
+            	var wRatio;
+            	var Ratio = 1;
+            	var w = img.width;
+            	var h = img.height;
+            	wRatio = maxWidth / w;
+            	hRatio = maxHeight / h;
+            	if (maxWidth == 0 && maxHeight == 0) {
+            		Ratio = 1;
+            	} else if (maxWidth == 0) {//
+            		if (hRatio < 1)
+            			Ratio = hRatio;
+            	} else if (maxHeight == 0) {
+            		if (wRatio < 1)
+            			Ratio = wRatio;
+            	} else if (wRatio < 1 || hRatio < 1) {
+            		Ratio = (wRatio <= hRatio ? wRatio : hRatio);
+            	}
+            	if (Ratio < 1) {
+            		w = w * Ratio;
+            		h = h * Ratio;
+            	}
+            	objImg.height = h;
+            	objImg.width = w;
+            } */
+      </script>
+      <script type="text/javascript">
+            function changeValidateCode(obj) {
+                  var timenow = new Date().getTime();
+                  obj.src = "yanzhengma.roah?d=" + timenow;
+            }
+      </script>
+      <script>
+            function getPhotoSize(obj) {
+                  photoExt = obj.value.substr(obj.value.lastIndexOf(".")).toLowerCase(); //获得文件后缀名
+                  if (photoExt != '.jpg') {
+                        alert("请上传后缀名为jpg的照片!");
+                        return false;
+                  }
+                  var fileSize = 0;
+                  var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
+                  if (isIE && !obj.files) {
+                        var filePath = obj.value;
+                        var fileSystem = new ActiveXObject("Scripting.FileSystemObject");
+                        var file = fileSystem.GetFile(filePath);
+                        fileSize = file.Size;
+                  } else {
+                        fileSize = obj.files[0].size;
+                  }
+                  fileSize = Math.round(fileSize / 1024 * 100) / 100; //单位为KB
+                  if (fileSize >= 10) {
+                        alert("照片最大尺寸为10KB，请重新上传!");
+                        return false;
+                  }
+            }
+      </script>
+      <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+      <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="../js/ajaxfileupload.js"></script>
+      <script src="../js/jquery.min.js"></script>
+      <!--<![endif]-->
+      <script src="../js/amazeui.min.js"></script>
+      <script src="../js/app.js"></script>
+
+      <script type="text/javascript">
+            var a=$('#xuehao').css('width');
+            $('#select1').css('cssText','width:'+ a + '!important;');
+            $('#select2').css('cssText','width:'+ a + '!important;');
+            $('#select3').css('cssText','width:'+ a + '!important;');
+            $('#select4').css('cssText','width:'+ a + '!important;');
+
+      </script>
+
+
+</body>
+
+</html>
