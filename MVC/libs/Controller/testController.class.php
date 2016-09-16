@@ -1,6 +1,6 @@
 <?php
-      require_once ('testModel.class.php');
-      require_once ('testView.class.php');
+      require_once ('./libs/Model/'.$name.'Model.class.php');
+      require_once('./libs/View/'.$name.'View.class.php');
       /**
        *
        */
