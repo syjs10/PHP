@@ -1,4 +1,5 @@
 <?php
+      header("Content-type:text/html; charset=utf-8");
       require_once ('../smarty/Smarty.class.php');
       $smarty = new Smarty();
       // 五个配置
