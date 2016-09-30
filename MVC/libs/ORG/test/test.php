@@ -13,7 +13,7 @@
       $smarty -> cache_lifetime  = 120;         //缓存开启时间
 
       //$smarty -> assign('articletitle','i ate an apple');
-      $smarty -> assign('time', time());
+      //$smarty -> assign('time', time());
       //$smarty -> assign('articletitle', '');
       // class My_Object{
       //       function meth1($params){
@@ -22,5 +22,6 @@
       // }
       // $myobj = new My_Object();
       // $smarty -> assign('myobj',$myobj);
-      $smarty -> display('test.tpl');
+      //$smarty -> display('test.tpl');
+      $smarty -> display('area.tpl');
 ?>

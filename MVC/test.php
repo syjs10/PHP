@@ -13,4 +13,5 @@
 
       $smarty -> assign('articletitle','文章标题');
       $smarty -> display('test.tpl');
+      //$smarty -> display('area.tpl');
 ?>
