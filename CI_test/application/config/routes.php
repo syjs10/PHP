@@ -55,6 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * 自定义路由
  */
+ $route['news/create'] = 'news/create';
  $route['news/(:any)'] = 'news/view/$1';
  $route['news'] = 'news';
  $route['(:any)'] = 'pages/view/$1';
