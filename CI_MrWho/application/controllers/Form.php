@@ -25,4 +25,13 @@
                         $this->load->view('application/success',$data);
                   }
             }
+            public function view($name=NULL) {
+                  $data['student_data'] = $this->form_model->get_data($name);
+                  if (empty($data['student_data'])) {
+                        show_404();
+                  }
+                  $this->load->view('templates/header');
+                  $this->load->view('application/show_student', $data);
+                  $this->load->view('templates/footer');
+            }
       }

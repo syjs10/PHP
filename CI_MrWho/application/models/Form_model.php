@@ -17,4 +17,12 @@
                   );
                   return $this->db->insert('student', $data);
             }
+            public function get_data($name=NULL) {
+                  if ($name === NULL) {
+                        $query = $this->db->get('student');
+                        return $query->result_array();
+                  }
+                  $query = $this->db->get_where('student',array('name' => $name));
+                  return $query->row_array();
+            }
       }

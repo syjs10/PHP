@@ -11,7 +11,6 @@
                   $this->load->helper('form');
             }
             public function view($pages) {
-
                   $this->load->view('templates/header');
                   $this->load->view('application/'.$pages);
                   $this->load->view('templates/footer');
