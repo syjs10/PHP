@@ -4,6 +4,10 @@
        */
       class Form extends CI_Controller{
 
+            function __construct() {
+                  parent::__construct();
+                  $this->load->model('form_model');
+            }
             public function index() {
                   $this->load->helper(array('form', 'url'));
                   $this->load->library('form_validation');
@@ -17,6 +21,7 @@
                         $this->load->view('templates/footer');
                   } else {
                         $data['name'] = $this->input->post('name');
+                        $this->form_model->save_data();
                         $this->load->view('application/success',$data);
                   }
             }
