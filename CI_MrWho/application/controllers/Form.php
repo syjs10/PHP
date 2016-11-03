@@ -7,6 +7,7 @@
             function __construct() {
                   parent::__construct();
                   $this->load->model('form_model');
+                  $this->load->library('session');
             }
             public function index() {
                   $this->load->helper(array('form', 'url'));
