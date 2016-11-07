@@ -1,5 +1,18 @@
 <?php
-      require_once 'string.func.php';
+      function buildRandomString($type=1, $length=4){
+            if ($type == 1){
+                  $chars = join("", range(0,9));
+            } elseif($type == 2) {
+                  $chars = join ("", array_merge(range("a","z"),range("A","Z")));
+            } elseif ($type  == 3) {
+                  $chars = join("",array_merge(range("a","z"),range("A","Z"),range(0,9)));
+            }
+            if ($length > strlen($chars)){
+                  exit ('字符串长度不足');
+            }
+            $chars = str_shuffle($chars);
+            return substr($chars, 0, $length);
+      }
       function verifyImage( $type = 1, $length = 4, $pixel = 0, $line = 0, $sess_name="verify"){
 
           $width = 80;
@@ -21,7 +34,7 @@
                $y = mt_rand(20,26);
                $color = imagecolorallocate($image,mt_rand(50,90),mt_rand(80,200),mt_rand(90,180));
 
-               $fontfile = "../fonts/SIMYOU.TTF";
+            //    $fontfile = "SIMYOU.TTF";
                $text = substr($chars,$i, 1);
 
                imagettftext($image, $size, $angle, $x, $y, $color, $fontfile, $text);
@@ -43,6 +56,7 @@
          header("Content-type:image/png");
          imagepng($image);
          imagedestroy($image);
+
     }
     verifyImage(1, 4, 0, 0);
 

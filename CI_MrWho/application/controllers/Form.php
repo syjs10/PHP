@@ -7,6 +7,7 @@
             function __construct() {
                   parent::__construct();
                   $this->load->model('form_model');
+                  $this->load->model('image_model');
                   $this->load->library('session');
             }
             public function index() {
@@ -34,5 +35,9 @@
                   $this->load->view('templates/header');
                   $this->load->view('application/show_student', $data);
                   $this->load->view('templates/footer');
+            }
+            function getverify(){
+                  $this->load->view('templates/header');
+                  $this->load->view('application/getVerify');
             }
       }
