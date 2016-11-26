@@ -21,14 +21,20 @@
                   $this->session->set_userdata(array('login_confirm' => FALSE));
                   $username = $this->input->post('username');
                   $password = $this->input->post('password');
+                  $verify = $this->input->post('verify');
+
+                  if ($verify != $_SESSION['verify']) {
+                        echo "<script>alert('验证码错误!');self.location='".site_url('/application/view/login')."'</script>";
+                  }
                   if ($username == "admin" && $password == "wangguan@2016") {
                         $this->session->set_userdata(array('login_confirm' => TRUE));
                         $this->load->view('application/s');
-
                   } else {
                         $this->session->set_userdata(array('login_confirm' => FALSE));
                         $this->load->view('application/s');
                   }
+
+
             }
 
 

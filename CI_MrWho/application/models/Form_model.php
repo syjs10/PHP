@@ -12,6 +12,7 @@
                   $data = array(
                         'name' => $this->input->post('name'),
                         'gender' => $this->input->post('gender'),
+                        'number' => $this->input->post('number'),
                         'class' => $this->input->post('class'),
                         'phone' => $this->input->post('phone')
                   );

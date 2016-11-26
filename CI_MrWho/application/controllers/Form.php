@@ -8,6 +8,7 @@
                   parent::__construct();
                   $this->load->model('form_model');
                   $this->load->model('image_model');
+                  $this->load->model('captcha_model');
                   $this->load->library('session');
             }
             public function index() {
@@ -17,15 +18,21 @@
                   $this->form_validation->set_rules('gender', '性别', 'required');
                   $this->form_validation->set_rules('class', '班级', 'required');
                   $this->form_validation->set_rules('phone', '联系方式', 'required');
-                  if ($this->form_validation->run() == FALSE) {
-                        $this->load->view('templates/header');
-                        $this->load->view('application/applications');
-                        $this->load->view('templates/footer');
+                  $verify = $this->input->post('verify');
+                  if ($verify == $_SESSION['verify']) {
+                        if ($this->form_validation->run() == FALSE) {
+                              $this->load->view('templates/header');
+                              $this->load->view('application/applications');
+                              $this->load->view('templates/footer');
+                        } else {
+                              $data['name'] = $this->input->post('name');
+                              $this->form_model->save_data();
+                              $this->load->view('application/success',$data);
+                        }
                   } else {
-                        $data['name'] = $this->input->post('name');
-                        $this->form_model->save_data();
-                        $this->load->view('application/success',$data);
+                        echo "<script>alert('验证码错误!');window.location.href='".site_url('/application/view/applications')."'</script>";
                   }
+
             }
             public function view($name=NULL) {
                   $data['student_data'] = $this->form_model->get_data($name);
@@ -36,8 +43,14 @@
                   $this->load->view('application/show_student', $data);
                   $this->load->view('templates/footer');
             }
-            function getverify(){
-                  $this->load->view('templates/header');
-                  $this->load->view('application/getVerify');
+            public function verify_image() {
+                $this->load->library('lib_captcha');
+                $this->lib_captcha->verifyImage(1,4,20,5);
+                echo $_SESSION['verify'];
             }
+            public function a()
+            {
+                  $this->load->view('validate');
+            }
+
       }
