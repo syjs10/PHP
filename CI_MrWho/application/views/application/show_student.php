@@ -19,7 +19,10 @@
                   班级
             </th>
             <th>
-                  联系方式
+                  电话
+            </th>
+            <th>
+                  QQ
             </th>
 
       </tr>
@@ -39,6 +42,9 @@
                         </td>
                         <td>
                               <?php echo $student['phone']; ?>
+                        </td>
+                        <td>
+                              <?php echo $student['qq']; ?>
                         </td>
                   </tr>
             <?php endforeach; ?>

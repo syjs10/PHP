@@ -1,1 +1,4 @@
-<?php echo $name."报名成功" ?>
+<?php
+      echo $name."报名成功";
+      echo "请加群"; 
+?>

@@ -11,11 +11,13 @@
       <input type="input" name="number" /> <br />
       <label for="class"> 班级 </label>
       <input type="input" name="class" /> <br />
-      <label for="phone"> 联系方式 </label>
+      <label for="phone"> 电话 </label>
       <input type="input" name="phone" /> <br />
-      <label for="class"> 验证码 </label>
+      <label for="qq"> QQ </label>
+      <input type="input" name="qq" /> <br />
+      <label for="verify"> 验证码 </label>
       <input type="text" name="verify"> <br />
-      
+
       <img src= "../../form/verify_image">
       <br>
       <input type="submit" name="submit" value="报名">

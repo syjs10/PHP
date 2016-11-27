@@ -17,7 +17,8 @@
                   $this->form_validation->set_rules('name', '姓名', 'required');
                   $this->form_validation->set_rules('gender', '性别', 'required');
                   $this->form_validation->set_rules('class', '班级', 'required');
-                  $this->form_validation->set_rules('phone', '联系方式', 'required');
+                  $this->form_validation->set_rules('qq', 'QQ', 'required');
+                  $this->form_validation->set_rules('phone', '电话', 'required');
                   $verify = $this->input->post('verify');
                   if ($verify == $_SESSION['verify']) {
                         if ($this->form_validation->run() == FALSE) {
@@ -47,10 +48,6 @@
                 $this->load->library('lib_captcha');
                 $this->lib_captcha->verifyImage(1,4,20,5);
                 echo $_SESSION['verify'];
-            }
-            public function a()
-            {
-                  $this->load->view('validate');
             }
 
       }

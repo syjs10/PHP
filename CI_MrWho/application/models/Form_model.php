@@ -14,6 +14,7 @@
                         'gender' => $this->input->post('gender'),
                         'number' => $this->input->post('number'),
                         'class' => $this->input->post('class'),
+                        'qq' => $this->input->post('qq'),
                         'phone' => $this->input->post('phone')
                   );
                   return $this->db->insert('student', $data);
