@@ -3,7 +3,7 @@
             echo "<script>alert('请登陆');self.location.href='../application/view/login';</script>";
       }
 ?>
-
+<a href="excel">生成excel表格</a>
 <table style="text-align:center;" class="show_table" cellspacing = "0px">
       <tr>
             <th>

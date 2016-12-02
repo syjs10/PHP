@@ -6,6 +6,6 @@
 <input type="password" name="password" ><br>
 <label for="verifycode">验证码</label>
 <input type="text" name="verify" ><br>
-<img src= "../../form/verify_image">
+<img src= "../../form/verify_image" onClick="this.src='../../form/verify_image'">
 <input type="submit"  value="登陆">
 </form>

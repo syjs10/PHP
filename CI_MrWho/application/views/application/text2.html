@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="Content-type:image/jpeg">
+<title></title>
+<script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="jquery.validate.min.js"></script>
+<script type="text/javascript" src="messages_zh.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css.css">
+  <script>
+    $.validator.setDefaults({
+        submitHandler: function() {
+        }
+    });
+    $().ready(function() {
+    // 在键盘按下并释放及提交后验证提交表单
+      $("#signupForm").validate({
+          rules: {
+            name: "required",
+            class: "required",
+            number: {
+              required: true,
+              minlength: 9
+            },
+            phone: {
+              required: true,
+              minlength: 11
+            }
+          },
+          messages: {
+            name: "请输入您的姓名",
+            class: "请输入您的班级",
+            number: {
+              required: "请输入您的学号",
+              minlength: "请输入正确的学号"
+            },
+            phone: {
+              required: "请输入电话",
+              minlength: "请输入正确的电话"
+            },
+          }
+      });
+    });
+  </script>
+  <style>
+    .error{
+      color:red;
+      }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="box">
+      <div class="pic">
+        <img id="title" src="img/wwwwww.png">
+      </div>
+      <div class="pic" id="shan">
+        <img id="mountion" src="img/山1.png">
+      </div>
+        <form class="cmxform" id="signupForm" method="post" action="http://syjs10.cn/CI_MrWho/index.php/form" accept-charset="utf-8">
+
+            <p>
+              <label class="label1" for="name">姓名：</label>
+              <input id="name" name="name" type="input">
+            </p>
+            <p>
+              <label class="label1" for="class">班级：</label>
+              <input id="class" name="class" type="input">
+            </p>
+            <p>
+              <label class="label1" for="number">学号：</label>
+              <input id="number" name="number" type="input">
+            </p>
+            <p>
+              <label class="label1" for="phone">电话：</label>
+              <input id="phone" name="phone" type="input">
+            </p>
+            <p>
+              <label class="label1" for="qq">QQ：</label>
+              <input type="input" name="qq" />
+            </p>
+            <div style="width: 50%;display: inline-block;">
+              <p>
+                  <label class="label2" for="gender">性别：</label>
+                  <select cname="gender">
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                  </select>
+                <br>
+                <label class="label2" for="verify">验证：</label>
+                <input id="verify" type="text" name="verify">
+              </p>
+            </div>
+              <img id="verpic" src= "../../form/verify_image" onClick="this.src='../../form/verify_image'">
+
+            <p>
+            <div style="width: 100%;">
+              <div style="background-image: url(img/报名按钮.png);width: 178px;height: 162px;margin: 0 auto;">
+                <input id="input" class="submit" type="submit" value="">
+              </div>
+            </div>
+            </p>
+        </form>
+      </div>
+
+    </div>
+    <div class="col-md-3"></div>
+
+  </div>
+</div>
+
+</body>
+</html>
