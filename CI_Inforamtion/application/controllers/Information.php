@@ -81,7 +81,7 @@
                   }
                   $sql .= ");";
                   if ($this->db->query($sql)) {
-                        echo "生成表成功";
+                        echo "生成表成功<br><a href="home">主页</a>";
                   }
             }
 
