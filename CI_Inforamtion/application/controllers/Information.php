@@ -25,9 +25,9 @@
             /*
                   填写需统计项目
              */
-            public function show($pages="need") {
+            public function show() {
                   $this->load->view('template/header');
-                  $this->load->view('information/'.$pages);
+                  $this->load->view('information/need');
                   $this->load->view('template/footer');
             }
 
@@ -81,7 +81,7 @@
                   }
                   $sql .= ");";
                   if ($this->db->query($sql)) {
-                        echo "生成表成功<br><a href="home">主页</a>";
+                        echo "生成表成功<br><a href='home'>主页</a>";
                   }
             }
 
