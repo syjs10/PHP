@@ -1,0 +1,13 @@
+-- CREATE DATABASE addnew CHARACTER SET 'utf8' COLLATE 'utf8_general_ci';
+-- CREATE USER 'addnew'@'localhost' IDENTIFIED BY 'addnew123';
+-- GRANT ALL ON addnew.* TO 'addnew'@'localhost';
+-- USE addnew
+-- CREATE TABLE add_survey(
+-- 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+-- 	need VARCHAR(100) NOT NULL,
+-- 	length INT NOT NULL
+-- );
+-- INSERT INTO add_survey (need, length) VALUES  ('姓名', 6);
+-- INSERT INTO add_survey (need, length) VALUES  ('学号', 9);
+-- INSERT INTO add_survey (need, length) VALUES  ('电话', 11);
+-- INSERT INTO add_survey (need, length) VALUES  ('班级', 20);

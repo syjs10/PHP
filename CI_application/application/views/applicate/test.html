@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>报名</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+	<link rel="stylesheet" type="text/css" href="<{$base_url}>bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="<{$base_url}>bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="<{$base_url}>bootstrap/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+			color: #fff;
+			background: url(<{$base_url}>img/survey.jpg) no-repeat;
+			/*background-size: cover;*/
+		}
+		.h1{
+			position: relative;
+			top:5%;
+		}
+		.container{
+			position: relative;
+			top: 10%;
+		}
+	           	table th, table td { 
+	           		font-size: 20px;
+			text-align: center !important;
+			border: 0px solid #ccc !important; 
+		}
+		.tab{
+			padding-top: 30px;
+			padding-bottom: 15px;
+			padding-right: -15px;
+			background: rgba(0,0,0,0.3);
+			border-radius: 5px;
+			box-shadow: 0px 0px 7px #333;
+		}
+		.input{
+			background: rgba(10,10,10, 0.3) !important;
+			border: 0px;
+			box-shadow: 0px 0px 3px #333;
+		}
+		input {
+			box-shadow: 0px 0px 3px  #2de812;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="h1" align="center"> 报名表 </h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6 tab" >
+				<form action="" class="form">
+					<table class="table">
+						<{foreach $datas as $data}>
+						<tr>	
+							<td style="padding-top: 10px;">
+								<{$data}>
+							</td>	
+							<td>
+								<input type="text" class="form-control input" name="<{$data}>" placeholder="<{$data}>">
+							</td>
+						</tr>
+						<{/foreach}>
+					</table>
+					<input type ="submit" class="btn btn-success" style="position: relative; left:30%;width:40%;" name="报名">
+					
+				</form>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div>
+</body>
+</html>
