@@ -28,9 +28,10 @@
 	$db->close();
 	if($insert_status) {
 		 // echo json_encode(['error'=>'0','msg'=>'Success message']);
-		 echo "报名成功<script>self.location='index.php?page=1'; </script>";
+		 echo "<script>self.location='index.php?page=1'; </script>";
 	} else{
 		// echo json_encode(['error'=>'1','msg'=>'Messages failed']);
+		echo "提交失败<a href='index.php?page=1'>返回</a>";
 	}
 
 ?>

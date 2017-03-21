@@ -43,7 +43,20 @@
 			 	$page = 1;
 			}
 			$offset = ($page - 1) * PER_PAGE_GB;
-			$pagedata_sql = 'SELECT  nickname,content,email,createtime,reply,replytime FROM '.GB_TABLE_NAME.' WHERE status = 0 ORDER BY createtime DESC LIMIT '.$offset.','.PER_PAGE_GB.";";
+			$pagedata_sql = 'SELECT  * FROM '.GB_TABLE_NAME.' WHERE status = 0 ORDER BY createtime DESC LIMIT '.$offset.','.PER_PAGE_GB.";";
+			$result = $this->con->query($pagedata_sql);
+			while($temp = $result->fetch_assoc()) {
+				$sql_page_array[] = $temp;
+			}
+			return $sql_page_array;
+		}
+		public function pageDivide_admin($table = GB_TABLE_NAME, $page = 1) {
+			$pagenum = $this->get_pagenum($table);
+			if ($page > $pagenum || $page < 0) {
+			 	$page = 1;
+			}
+			$offset = ($page - 1) * PER_PAGE_GB;
+			$pagedata_sql = 'SELECT  * FROM '.GB_TABLE_NAME.'  ORDER BY createtime DESC LIMIT '.$offset.','.PER_PAGE_GB.";";
 			$result = $this->con->query($pagedata_sql);
 			while($temp = $result->fetch_assoc()) {
 				$sql_page_array[] = $temp;

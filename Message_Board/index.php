@@ -67,8 +67,8 @@ ht;
 				      <div class="form-group">
 					        <label for="" class="col-sm-2 control-label"></label>
 					        <div class="col-sm-6">
-						            <button type="submit"  name="sub" id="sub">留言</button>
-						            <button type="reset"  id="reset">重置</button>
+						            <button type="submit"  name="sub" id="sub" class="btn btn-default">留言</button>
+						            <button type="reset"  id="reset" class="btn btn-default">重置</button>
 					        </div>
 				      </div>
 			    </form>
@@ -81,3 +81,4 @@ ht;
 <!--简单校验，及ajax提交表单-->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/ajax_submit.js"></script> 
+
